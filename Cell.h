@@ -1,6 +1,10 @@
+// What: The cell class has a vector of possible ints that it could be, and identifiers for what it belongs to
+// Who: Robindiddams
+// Date: April 29, 2017
+
 #ifndef CELL_H
 #define CELL_H
-//#include "Main.h"
+
 #include <vector>
 #include <iostream>
 
@@ -38,7 +42,6 @@ public:
 	int getBoxNum();
 	int getRowNum();
 	int getColNum();
-	int getPossSize();
 
 	void reduceByNumbers();
 	void reducePossibilities(int);

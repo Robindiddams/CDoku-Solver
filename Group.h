@@ -1,3 +1,7 @@
+// What: the group class is either a row, box or column, has an array of 9 cells
+// Who: Robindiddams, Aaron Hamilton, Tom Reynolds
+// Date: April 29, 2017
+
 #ifndef GROUP_H
 #define GROUP_H
 #include "Cell.h"
@@ -22,7 +26,7 @@ public:
 
 	void reduceByNumbers();
 	void reduceByCells();
-	void solveBox();
+
 
 };
 

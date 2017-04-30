@@ -1,7 +1,10 @@
+// What: The cell class has a vector of possible ints that it could be, and identifiers for what it belongs to
+// Who: Robindiddams, Aaron Hamilton, Tom Reynolds
+// Date: April 29, 2017
+
 #include "Cell.h"
 
 //Here begins the getters and setters ~~~~~~~~~~~~
-//Aaron wrote these
 void Cell::reduce(vector<int>poss)
 {
 	possibilities = poss;
@@ -52,19 +55,13 @@ int Cell::getColNum()
 	return colNum;
 }
 
-int Cell::getPossSize()
-{
-	return possibilities.size();
-}
-
 //Here ends the getters and setters ~~~~~~~~~~~~
 
 
 
 Cell::Cell() 
 {
-	 //some setup
-	//written by robin
+	//some setup
 	answer = 0;
 
 	//fill possibilities
@@ -102,7 +99,6 @@ void Cell::decide()
 {
 	  //checks if there is one possibility
 	 //if so it will set that to the answer
-	//tom wrote this
 
 	if(possibilities.size() == 1)
 	{
@@ -113,7 +109,6 @@ void Cell::decide()
 void Cell::decide(int newAnswer)
 {
 	 //sets answer to given int and clears the vector
-	//tom wrote this
 	answer = newAnswer;
   	for (int i = 0; i < possibilities.size(); i++)
     {
@@ -128,7 +123,6 @@ void Cell::decide(int newAnswer)
 bool Cell::findPossibility(int num)
 {
 	 //checks if the given num is in the possibilities vector
-	//tom wrote this
 	for (int i = 0; i < possibilities.size(); i++)
 	{
 	if (possibilities[i] == num)

@@ -1,20 +1,15 @@
-// Class: CSI-240-01
-// Assignment: final project
-// What we did: we made a sudoku solver
-// Who: Aaron Hamilton, Tom Reynolds, Robin Diddams
+// What: we made a sudoku solver, functions for main class
+// Who: Aaron Hamilton, Tom Reynolds, Robindiddams
 // Date: April 28, 2016
 
 #include "Puzzle.h"
 
 Puzzle::Puzzle()
 {
-	openSudoku();
-	loadPuzzle();
-	boxes[0].solveBox();
+
 }
 
 //Here begins the getters and setters ~~~~~~~~~~~~
-//Aaron wrote these
 void Puzzle::setRows(Group gArr[])
 {
 	rows[9] = gArr[9];
@@ -63,7 +58,6 @@ Cell Puzzle::getPuzzle()
 void Puzzle::openSudoku()
 {
 	//opens a sudoku.txt file and loads it into the puzzle array
-	//robin wrote this
 
 	// 	Cell puzzle[9][9];
 	int i, j, temp;
@@ -95,7 +89,6 @@ void Puzzle::openSudoku()
 void Puzzle::loadPuzzle()
 {
 	//adds pointers to data from puzzle[][] array to groups
-	//robin wrote this
 
 	int r, c, box, boxRow, boxCol, boxr, boxc, boxPos;
 
@@ -155,7 +148,6 @@ void Puzzle::solve()
 {
 	  //runs all the solving algorithms in the 
 	 //order that we found most efficient.
-	//tom wrote this
 
 	for (int k = 0; k < 100; k++)
 	{
@@ -178,11 +170,6 @@ void Puzzle::solve()
 			cols[j].reduceByCells();
 			boxes[j].reduceByCells();
 		}
-
-		for (int g = 0; g < 9; g++)
-		{
-			boxes[g].solveBox();
-		}
 		
     	if (isSolved())
     	{
@@ -199,7 +186,6 @@ bool Puzzle::isSolved()
 {
 	  //iterates though the puzzle array and
 	 //checks if every spot has been filled
-	//tom wrote this
 
   for (int i = 0; i < 9; i++)
   {
@@ -219,7 +205,6 @@ void Puzzle::printPrettyPuzzle()
 {
 	  //prints out the puzzle array, all 
 	 //pretty and formatted
-	//robin wrote this
 	cout << " =======================" << endl;
 	for (int i = 0; i < 9; i++)
 	{
@@ -239,7 +224,6 @@ void Puzzle::printPrettyPuzzle()
 string Puzzle::getAscii(int num)
 {
 	 //used for print pretty puzzle function
-	//robin wrote this
 
 	if ((num == 3) || (num == 6) || (num == 9))
 	{
@@ -252,7 +236,6 @@ string Puzzle::getAscii(int num)
 string Puzzle::getAsciiLine(int num)
 {
 	 //used for print pretty puzzle function
-	//robin wrote this
 
 	if ((num == 2) || (num == 5))
 	{
@@ -266,7 +249,6 @@ int Puzzle::getCellAnswer(int r, int c)
 {
 	  //used for UI part that just returns one
 	 //solved cell
-	//robin wrote this
 
 	return puzzle[r - 1][c - 1].getAnswer();
 }
@@ -276,8 +258,8 @@ int Puzzle::getCellAnswer(int r, int c)
 void Puzzle::userLoadPuzzle()
 {
 	 //lets user input their own sudoku puzzle manually
-	//tom wrote this
-  	int num;
+
+	int num;
 	cout << "Please input the puzzle. Enter each number one at a time, starting in the top left corner and moving left to right, top to bottom. Enter zeroes for blank spaces. Press enter after each number.\n";
 	for (int i = 0; i < 9; i++)
 	{
