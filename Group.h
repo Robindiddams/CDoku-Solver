@@ -21,7 +21,7 @@ public:
 	void setArrVal(int, Cell*);
 
 	//getters
-	Cell getCell();
+	Cell getCell(int);
 	Cell* getArrVal(int);
 
 	void reduceByNumbers();

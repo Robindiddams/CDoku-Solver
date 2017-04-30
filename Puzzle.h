@@ -28,18 +28,18 @@ public:
 	Puzzle();
 
 	//setters
-	void setRows(Group[]);
-	void setCols(Group[]);
-	void setBoxes(Group[]);
+	// void setRows(Group[]);
+	// void setCols(Group[]);
+	// void setBoxes(Group[]);
 
-	void setPuzzle(Cell[]);
+	// void setPuzzle(Cell[]);
 
 	//getters
-	Group getRows();
-	Group getCols();
-	Group getBoxes();
+	// Group getRows();
+	// Group getCols();
+	// Group getBoxes();
 
-	Cell getPuzzle();
+	// Cell getPuzzle();
 
 	//excelent algorithms
 	void openSudoku();

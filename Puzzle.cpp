@@ -10,45 +10,45 @@ Puzzle::Puzzle()
 }
 
 //Here begins the getters and setters ~~~~~~~~~~~~
-void Puzzle::setRows(Group gArr[])
-{
-	rows[9] = gArr[9];
-}
+// void Puzzle::setRows(Group gArr[])
+// {
+// 	rows[9] = gArr[9];
+// }
 
-void Puzzle::setCols(Group cArr[])
-{
-	cols[9] = cArr[9];
-}
+// void Puzzle::setCols(Group cArr[])
+// {
+// 	cols[9] = cArr[9];
+// }
 
-void Puzzle::setBoxes(Group bArr[])
-{
-	boxes[9] = bArr[9];
-}
+// void Puzzle::setBoxes(Group bArr[])
+// {
+// 	boxes[9] = bArr[9];
+// }
 
-void Puzzle::setPuzzle(Cell cArr[])
-{
-	puzzle[9][9] = cArr[9];
-}
+// void Puzzle::setPuzzle(Cell cArr[])
+// {
+// 	puzzle[9][9] = cArr[9];
+// }
 
-Group Puzzle::getRows()
-{
-	return rows[9];
-}
+// Group Puzzle::getRows()
+// {
+// 	return rows[9];
+// }
 
-Group Puzzle::getCols()
-{
-	return cols[9];
-}
+// Group Puzzle::getCols()
+// {
+// 	return cols[9];
+// }
 
-Group Puzzle::getBoxes()
-{
-	return boxes[9];
-}
+// Group Puzzle::getBoxes()
+// {
+// 	return boxes[9];
+// }
 
-Cell Puzzle::getPuzzle()
-{
-	return puzzle[9][9];
-}
+// Cell * Puzzle::getPuzzle()
+// {
+// 	return puzzle;
+// }
 
 //Here ends the getters and setters ~~~~~~~~~~~~
 
@@ -90,7 +90,7 @@ void Puzzle::loadPuzzle()
 {
 	//adds pointers to data from puzzle[][] array to groups
 
-	int r, c, box, boxRow, boxCol, boxr, boxc, boxPos;
+	int r, c, box = 0, boxRow, boxCol, boxr, boxc, boxPos;
 
 	//rows and cols
 	for(r = 0; r < 9; r++)

@@ -6,7 +6,7 @@
 
 
 //Here begins the getters and setters ~~~~~~~~~~~~
-//Aaron wrote these
+
 void Group::setArray(Cell *arr[])
 {
 	*cellArray[9] = *arr[9];
@@ -17,9 +17,9 @@ void Group::setArrVal(int place, Cell *val)
 	cellArray[place] = val;
 }
 
-Cell Group::getCell()
+Cell Group::getCell(int cell)
 {
-	return *cellArray[9];
+	return *cellArray[cell];
 }
 
 Cell* Group::getArrVal(int place)
@@ -36,8 +36,6 @@ void Group::reduceByNumbers()
 			 //most powerful and functional algorithm
 			//compares the answers of cells in a group 
 		 //to then reduce possibilities.
-		//tom wrote this
-
 
 	for (int i = 0; i < 9; i++)
 	{
@@ -60,7 +58,7 @@ void Group::reduceByCells()
 			 //checks the groups around this group for
 			//if a value exists and if it does not, it
 		 //puts it there
-		//tom wrote this
+
 		int index;
 		int count;
 		for (int i = 1; i < 9; i ++) // iterates through possibilities
@@ -76,9 +74,9 @@ void Group::reduceByCells()
 								index = j; 
 						}
 				}
-				if (count = 8)
+				if (count == 8)
 				{
-				// cellArray[index]->decide(i);
+				cellArray[index]->decide(i);
 				}
 				count = 0;
 		}
