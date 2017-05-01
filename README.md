@@ -26,10 +26,5 @@ Example Usage:
 
 ### History
 
-Initially it was Tom Reynolds, Aaron Hamilton and Robindiddams.
-We built this for a programming class.
-Aaron designed the UI and made the code clean.
-Tom wrote much of the Cell and Group functions that did comparisons.
-Robindiddams designed how data was loaded and inserted into the classes.
-
-I (Robindiddams) wanted to continue development (and keep practicing c/c++) and I love the git community so here it is. PR's welcome!
+Myself (Robindiddams) and two friends built this for a programming class.
+I wanted to continue development (and keep practicing c/c++) and I love the git community so here it is. PR's welcome!
