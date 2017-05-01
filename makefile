@@ -8,3 +8,6 @@ CFLAGS=-Wall
 
 all:
 	$(CC) $(CFLAGS) src/*.cpp -o CDoku
+
+clean:
+	rm CDoku
