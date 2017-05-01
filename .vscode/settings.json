@@ -9,6 +9,12 @@
 		"typeinfo": "cpp",
 		"iostream": "cpp",
 		"iosfwd": "cpp",
-		"ostream": "cpp"
+		"ostream": "cpp",
+		"bitset": "cpp",
+		"locale": "cpp",
+		"ios": "cpp",
+		"__bit_reference": "cpp",
+		"algorithm": "cpp",
+		"string": "cpp"
 	}
 }

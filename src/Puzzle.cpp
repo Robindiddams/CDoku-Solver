@@ -65,25 +65,62 @@ void Puzzle::openSudoku()
 	fstream sudopen;
 
 	sudopen.open("sudoku.txt", ios::in);
-	if (sudopen.fail())
+	if (sudopen.fail()) {
 		cout << "Cant find sudoku file";
-
-	for (i = 0; i < 9; i++)
-	{
-		for (j = 0; j < 9; j++)
-		{
-			sudopen >> temp;
-			puzzle[i][j].setAnswer(temp);
-			// cout << temp << " ";
-			cout << puzzle[i][j].getAnswer() << " ";
+	} else {
+		for (i = 0; i < 9; i++) {
+			for (j = 0; j < 9; j++) {
+				sudopen >> temp;
+				puzzle[i][j].setAnswer(temp);
+				cout << puzzle[i][j].getAnswer() << " ";
+			}
+			cout << endl;
 		}
-		cout << endl;
+		sudopen.close();
 	}
+}
 
-	sudopen.close();
+void Puzzle::writeOutSudoku(string outputFile)
+{
+	//writes puzzle array to file
 
-	//debug cout statements
+	int i, j;
 
+	fstream sudopen;
+
+	sudopen.open(outputFile, ios::out);
+	if (sudopen.fail()) {
+		cout << "Cant find sudoku file";
+	} else {
+		for (i = 0; i < 9; i++) {
+			for (j = 0; j < 9; j++) {
+				sudopen << puzzle[i][j].getAnswer() << " ";
+			}
+			sudopen << endl;
+		}
+		sudopen.close();
+	}
+}
+
+void Puzzle::openSudoku(string filename) {
+	//opens a given file and loads it into the puzzle array
+
+	int i, j, temp;
+
+	fstream sudopen;
+
+	sudopen.open(filename, ios::in);
+	if (sudopen.fail()) {
+		cout << "Cant find sudoku file";
+	} else {
+		for (i = 0; i < 9; i++) {
+			for (j = 0; j < 9; j++) {
+				sudopen >> temp;
+				puzzle[i][j].setAnswer(temp);
+			}
+		}
+		sudopen.close();
+	}
 }
 
 void Puzzle::loadPuzzle()
@@ -126,7 +163,6 @@ void Puzzle::loadPuzzle()
 		}
 	}
 
-	cout << endl;
 
 	vector<int> noPoss;
 
@@ -253,6 +289,27 @@ int Puzzle::getCellAnswer(int r, int c)
 	return puzzle[r - 1][c - 1].getAnswer();
 }
 
+string Puzzle::getRowAnswer(int r)
+{
+	  //used for UI part that just returns one
+	 //solved row
+	string row = "";
+	for (int i = 0; i < 9; i++){
+		row += to_string(puzzle[r - 1][i].getAnswer()) + " ";
+	}
+	return row;
+}
+
+string Puzzle::getColAnswer(int c)
+{
+	  //used for UI part that just returns one
+	 //solved col
+	string col = "";
+	for (int i = 0; i < 9; i++){
+		col += to_string(puzzle[i][c - 1].getAnswer()) + " ";
+	}
+	return col;
+}
 
 
 void Puzzle::userLoadPuzzle()

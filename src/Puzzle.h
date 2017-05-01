@@ -43,6 +43,8 @@ public:
 
 	//excelent algorithms
 	void openSudoku();
+	void openSudoku(string);
+	void writeOutSudoku(string);
 	void loadPuzzle();
 	void reduceByNumbers();
 	void solve();
@@ -51,7 +53,10 @@ public:
 	void printPrettyPuzzle();
 	string getAscii(int);
 	string getAsciiLine(int);
+
 	int getCellAnswer(int, int);
+	string getColAnswer(int);
+	string getRowAnswer(int);
 	void userLoadPuzzle();
 
 	//deconstructor

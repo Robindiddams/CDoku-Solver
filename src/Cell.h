@@ -1,5 +1,5 @@
 // What: The cell class has a vector of possible ints that it could be, and identifiers for what it belongs to
-// Who: Robindiddams
+// Who: Robindiddams, Aaron Hamilton, Tom Reynolds
 // Date: April 29, 2017
 
 #ifndef CELL_H
